@@ -1,13 +1,15 @@
 function register(element) {
-  const username = element.children.username.value
+  const username = document.getElementById('username').value
   const password = element.children.password.value
   const passwordConfirmation = element.children.passwordConfirmation.value
-  
-  //console.log({username, password, passwordConfirmation});
 
-  if(password === passwordConfirmation) {
-    alert('Usuário "' + username + '" registrado!')
+  if(password == '') {
+    alert('Digite sua senha')
+  } else if(password === passwordConfirmation) {
+    alert(`Usuário "${username}" registrado!`)
   } else {
-    alert('As senhas não conferem')
+    alert('Senhas não conferem')
   }
+
+  console.log(this)
 }
